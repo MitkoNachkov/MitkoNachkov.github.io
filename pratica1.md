@@ -16,6 +16,7 @@ Para empezar hay que instalar el servicio **rsyslog**.
 
  ![rsyslog1](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/e591b417-2a19-4004-affe-6e1c51e96036)
 
+*Las lineas de TCP tambien*
 
 >1.2.Despues de reiniciar el servicio tendremos que activar el firewall y permitir la conexion UDP y TCP por el puerto 514 que es el que hemos especificado en el archivo de configuracion de rsyslog.
 - #sudo ufw enable
