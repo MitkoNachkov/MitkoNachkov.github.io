@@ -11,3 +11,10 @@
 >Un ejemplo de configuracion podria ser este:
 
  ![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/0061645b-14a2-4173-acff-4a9e8271936a)
+
+>3.Para comprobar nuestras contraseñas con los creditos que modificamos, usaremos el siguente comando:
+-# echo "Contraseña" | pwscore
+>Lo que hará este comando es darle un valor a la contraseña que hemos puesto.
+
+ ![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/09ce8a1e-1d7c-4095-b5b3-e57aba53373e)
+
