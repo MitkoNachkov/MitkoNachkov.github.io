@@ -39,8 +39,9 @@ Para empezar hay que instalar el servicio **rsyslog**.
 - #logger "Mitko123"
 >Ahora desde el servidor ejecutamos el siguente comando
 -#tail /var/log/syslog
->Para ver el final del archivo syslog.Si se ha establecido conexion deveriamos ver algo asi:
-ç![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/77dbcff9-529b-4fcf-8be5-3cafe551f065)
+>Para ver el final del archivo syslog.Si se ha establecido conexion deberiamos ver algo asi:
+
+![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/77dbcff9-529b-4fcf-8be5-3cafe551f065)
 
 
 
