@@ -33,9 +33,34 @@ Para esta practica lo que haremos es Instalar apache2 en un servidor y con Easy-
 >Para crear el certificado publico y el para de claves privadas ejecutaremos el comando (Estando en el directorio /easy-rsa):
 ```$ ./easyrsa build-ca```
 
->Al ejecutarlo nos pedira una passphrase y como queremos llamar al archivo resultante:
+>Al ejecutarlo nos pedira una passphrase para el archivo resultante:
 
 ![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/8b5e1d89-a6d6-455c-b334-49d97151804d)
+
+>Ya tenemos los dos archivos /pki/ca.crt y /pki/pirivate/ca.key . CRT es el certificado publico y KEY es la calve privada que usa CA para firmar certificados.
+
+>Una vez que hemos instalado el CA ahora vamos a firmar una peticion CSR
+>Para ello tenemos que instalar openssl:
+``` $ sudo apt install openssl ```
+
+>Igual que en easy-rsa crearemos un directorio para que tengamos a mano la peticion que crearemos y firmaremos.
+```$ mkdir ~/practice-csr```
+```$ cd ~/practice-csr```
+```$ openssl genrsa -out mitko-server.key```
+
+>Ahora que tenemos la clave privada crearemos un CSR:
+```$ openssl req -new -key mitko-server.key -out mitko-server.req```
+
+>La pasamos a easyrsa y la firmamos. Nos creara un certificado mitko-server.crt:
+```$ cd ~/easy-rsa```
+```$ ./easyrsa import-req /home/mitko/practice-csr/mitko-server.req mitko-server```
+```$ ./easyrsa sign-req server mitko-server```
+
+>Pasamos el certificado CRT a nuestro cliente por SCP y lo importamos en nuestro navegador:
+```scp pki/issued/mitko-server.crt mitko@192.168.1.2:/Descargas```
+
+
+
 
 
 
