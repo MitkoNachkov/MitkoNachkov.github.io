@@ -27,7 +27,7 @@
 >Al alumno1 le daremos permisos de lectura y escritura para ESO1.
 ```-# setfacl -Rm g:alumnos:rwx,u:alumno1:rw /home/mitko/Compartido/Estudiante/ESO1/```
 
->Con el comando getfacl Compartido/Estudiante/ESO1/ podemos ver todos los permisos que tiene la carpeta.
+>Con el comando ```getfacl Compartido/Estudiante/ESO1/``` podemos ver todos los permisos que tiene la carpeta.
 ![image](https://github.com/MitkoNachkov/MitkoNachkov.github.io/assets/145337541/8740f545-f689-4d45-9137-cbdc65d31253)
 
 
