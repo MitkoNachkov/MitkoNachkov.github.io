@@ -1,5 +1,4 @@
 # Titulo1
-## Titulo2
 [Practica1](practica1.md)
 
 [Practica2](practica2.md)
